@@ -4,10 +4,9 @@ An application/ Match game. Click an image to start the game and increase your s
 
 ## Demo
 
-Click the link above to display the app.
 
-*Check out the Demo!*
-![clicky game](https://i.makeagif.com/media/10-07-2018/AuV0Z_.gif)
+# ![clicky game](https://i.makeagif.com/media/10-07-2018/AuV0Z_.gif)
+
 
 
 ## Technologies 
