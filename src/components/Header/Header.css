@@ -1,0 +1,40 @@
+.hero {
+  height: 400px;
+  background-size: fill;
+  background-position: center;
+  background-image: url("https://wallpapercave.com/wp/wp2067177.jpg");
+  position: relative;
+  box-shadow: 0 0 15px 0 black;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  opacity: .4;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+}
+
+.hero * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1, .hero h2 {
+  color: white;
+}
+
+.hero h1, .hero h2 {
+  font-size: 50px;
+  padding-top: 200px;
+  margin-top: 10px;
+}
+
+.hero h6 {
+  font-size: 20px;
+  padding-top: 50px;
+}
