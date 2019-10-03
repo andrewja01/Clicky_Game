@@ -1,17 +1,17 @@
-import React from "react";
-import Wrapper from "./components/wrapper";
-import Navbar from "./components/Navbar";
-import Header from "./components/Header";
-import MatchCard from "./components/MatchCard"
-import friends from "./images/images.json"
+import React from 'react';
+import Wrapper from './components/wrapper';
+import Navbar from './components/Navbar';
+import Header from './components/Header';
+import MatchCard from './components/MatchCard';
+import friends from './images/images.json';
 
 function mixCards(friends) {
   for (let i = friends.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [friends[i], friends[j]] = [friends[j], friends[i]];
   }
-  return friends
-};
+  return friends;
+}
 
 class App extends React.Component {
   state = {
@@ -19,26 +19,24 @@ class App extends React.Component {
     count: 0,
     topScore: 0,
     clickedList: [],
-    answer: "Click a Picture to begin"
+    answer: ''
   };
 
   handleIncrement = () => {
-    const newCount = this.state.count + 1
+    const newCount = this.state.count + 1;
     this.setState({
       count: newCount,
-      answer: "Correct!"
-    })
+      answer: 'Correct!'
+    });
     if (newCount >= this.state.topScore) {
       this.setState({ topScore: newCount });
-      if(newCount === 12 ) {
-        this.setState({ answer: "Hey Arnold! You Win!" })
+      if (newCount === 12) {
+        this.setState({ answer: 'Hey Arnold! You Win!' });
         this.reset();
       }
-      // this.setState({ answer: "Hey Arnold! You Win!" });
+    } else if (newCount === 12) {
+      this.setState({ answer: 'Hey Arnold! You Win!' });
     }
-    else if (newCount === 12) {
-      this.setState({ answer: "Hey Arnold! You Win!" });
-    } 
     this.handleShuffle();
   };
 
@@ -48,19 +46,19 @@ class App extends React.Component {
       this.setState({ clickedList: this.state.clickedList.concat(id) });
     } else {
       this.setState({
-        answer: "Hey Arnold! Try Again!"
-      })
+        answer: 'Hey Arnold! Try Again!'
+      });
       this.handleShuffle();
       this.reset();
-    };
+    }
   };
 
   handleShuffle = () => {
     let shuffledCards = mixCards(friends);
     this.setState({
       friends: shuffledCards
-    })
-  }
+    });
+  };
 
   reset = () => {
     if (this.state.count >= this.state.topScore) {
@@ -68,13 +66,12 @@ class App extends React.Component {
         topScore: this.state.count,
         count: 0,
         clickedList: []
-      })
-    }
-    else {
+      });
+    } else {
       this.setState({
         count: 0,
         clickedList: []
-      })
+      });
     }
   };
 
@@ -87,7 +84,7 @@ class App extends React.Component {
           topScore={this.state.topScore}
         />
         <Header />
-        <div className="col-10">
+        <div>
           <Wrapper>
             {friends.map(friends => (
               <MatchCard
@@ -104,7 +101,7 @@ class App extends React.Component {
         </div>
       </div>
     );
-  };
-};
+  }
+}
 
 export default App;
