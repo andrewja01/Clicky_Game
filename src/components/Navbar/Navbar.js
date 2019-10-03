@@ -1,14 +1,18 @@
-import React from "react";
-import "./Navbar.css";
+import React from 'react';
+import './Navbar.css';
 
 const Navbar = props => (
-
-  <nav className="navbar fixed-top navbar-expand-lg navbar-light">
-    <span className="col-4 ml-5 navbar-text text-dark h1">Clicky Game!</span>
-    <span className="col ml-5 navbar-text text-dark h1">{props.answer}</span>
-    <span className="col ml-5 navbar-text text-dark h1">Score: {props.count} | Top Score: {props.topScore} </span>
+  <nav className='navbar sticky-top navbar-expand-lg navbar-dark bg-dark '>
+    <span className='col-xl navbar-text text-light h1'>Clicky Game!</span>
+    <span className='col-xl navbar-text text-light h2'>{props.answer}</span>
+    <span className='col-xl-2 navbar-text text-light h1'>
+      Score: {props.count}
+    </span>
+    <span className='col-xl-2 navbar-text text-light h1'>
+      {' '}
+      Top Score: {props.topScore}{' '}
+    </span>
   </nav>
-
 );
 
 export default Navbar;
