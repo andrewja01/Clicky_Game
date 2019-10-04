@@ -1,5 +1,4 @@
 import React from 'react';
-import './Navbar.css';
 
 const Navbar = props => (
   <nav className='navbar sticky-top navbar-expand-lg navbar-dark bg-dark '>
