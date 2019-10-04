@@ -5,7 +5,7 @@ An application/ Match game. Click an image to start the game and increase your s
 ## Demo
 
 
-# [clicky game!] (https://giphy.com/embed/j3Q7R7uplUzvVISHAA)
+# [clicky game!] (https://media.giphy.com/media/j3Q7R7uplUzvVISHAA/source.mov)
 
 
 
