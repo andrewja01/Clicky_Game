@@ -84,21 +84,19 @@ class App extends React.Component {
           topScore={this.state.topScore}
         />
         <Header />
-        <div>
-          <Wrapper>
-            {friends.map(friends => (
-              <MatchCard
-                key={friends.id}
-                id={friends.id}
-                image={friends.image}
-                handleClick={this.handleClick}
-                handleShuffle={this.handleShuffle}
-                handleIncrement={this.handleIncrement}
-                mixCards={this.mixCards}
-              />
-            ))}
-          </Wrapper>
-        </div>
+        <Wrapper>
+          {friends.map(friends => (
+            <MatchCard
+              key={friends.id}
+              id={friends.id}
+              image={friends.image}
+              handleClick={this.handleClick}
+              handleShuffle={this.handleShuffle}
+              handleIncrement={this.handleIncrement}
+              mixCards={this.mixCards}
+            />
+          ))}
+        </Wrapper>
       </div>
     );
   }

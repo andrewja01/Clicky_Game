@@ -3,11 +3,11 @@ import './MatchCard.css';
 
 const MatchCard = props => (
   <div
-    className='card col-xl-3 col-md-4 col-sm-1 p-5 m-5'
+    className='btn btn-outline-secondary card col-xl-3 col-md-4 col-sm-3 m-5 align-items-center'
     value={props.id}
     onClick={() => props.handleClick(props.id)}
   >
-    <div className='img-container'>
+    <div className='img-container m-5 align-items-center'>
       <img alt={props.id} src={props.image} />
     </div>
   </div>

@@ -1,5 +1,10 @@
 .card {
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  height: 300px;
+}
+
+.card:hover {
+  padding-right: 25px;
 }
 
 .card > .img-container {
@@ -7,5 +12,7 @@
   overflow: hidden;
 }
 .card > .img-container > img {
-  width: 60%;
+  height: 90%;
+  display: block;
+  overflow: hidden;
 }
